@@ -1,0 +1,15 @@
+<h3>Listado de Pel&iacute;culas</h3>
+<hr>
+<small *ngIf="movies.length <= 0; else iniMovies">No hay pel&iacute;culas cargadas</small>
+<ng-template #iniMovies>
+    <ul>
+        <li *ngFor="let movie of movies">
+            {{movie.id}} {{movie.name}} {{movie.year}}
+        </li>                
+    </ul>    
+</ng-template>
+<div class="row" *ngIf="movies.length <= 0">
+    <div class="col-3">
+        <button (click)="start()">Inicializar</button>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h3>Agregar Pel&iacute;cula</h3>
+<hr>
+<form (ngSubmit)="save()">
+  <input type="number" placeholder="ID" [(ngModel)]="movieForm.id" name="id">
+  <input type="text" placeholder="Nombre" [(ngModel)]="movieForm.name" name="name">
+  <input type="number" placeholder="A&nacute;o" [(ngModel)]="movieForm.year" name="year">
+  <button type="submit">Agregar</button>
+</form>
